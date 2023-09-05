@@ -1,9 +1,10 @@
+
 import './App.css';
-import './reset.css';
+import Button from './components/Button';
 
 function App() {
   return (
-    <h1>APP</h1>
+    <Button text={'Iniciar'} />
   );
 }
 
