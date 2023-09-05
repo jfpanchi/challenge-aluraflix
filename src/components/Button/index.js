@@ -3,7 +3,7 @@ import React from 'react'
 
 const Button = ({color, text, variant}) => {
   return (
-    <Btn variant={variant} color={color}>{text}</Btn>
+    <Btn variant={variant} color={color} >{text}</Btn>
   )
 }
 
