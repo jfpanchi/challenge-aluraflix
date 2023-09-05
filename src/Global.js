@@ -11,6 +11,8 @@ export const globalTheme =  createTheme({
         error: {
             main: '#C62828'
         },
-        
+        white: {
+            main : '#F5F5F5'
+        }
     }
 })

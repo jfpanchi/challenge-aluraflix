@@ -1,9 +1,9 @@
 import { Button as Btn } from '@mui/material'
 import React from 'react'
 
-const Button = ({color, text}) => {
+const Button = ({color, text, variant}) => {
   return (
-    <Btn variant="contained" color={color}>{text}</Btn>
+    <Btn variant={variant} color={color}>{text}</Btn>
   )
 }
 
