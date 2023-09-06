@@ -1,16 +1,12 @@
 
 import './App.css';
-import Banner from './components/Banner';
-import Footer from './components/Footer';
-import Header from './components/Header';
+import Layout from './pages/Layout';
 
 function App() {
   return (
-    <>
-      <Header/>
-      <Banner/>
-      <Footer/>
-    </>
+    <Layout>
+      <h1>Soy Contenido</h1>
+    </Layout>
   );
 }
 
