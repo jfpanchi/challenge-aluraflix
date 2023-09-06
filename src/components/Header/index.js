@@ -8,7 +8,7 @@ const Header = () => {
       <AppBar position="static" color='secondary'>
         <Toolbar >
           <Typography color="primary" variant="h6" fontWeight="bold" component="div" sx={{ flexGrow: 1 }}>
-            ALURAFLIX
+            <img src="/logo-aluraflix.png" alt='Logo AluraFlix' width={'165px'} height={'46px'}/>
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             <Button variant="outlined" text="Nuevo video" color="white" />
