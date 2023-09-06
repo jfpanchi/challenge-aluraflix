@@ -29,12 +29,11 @@ const Banner = () => {
         >
           Challege React
         </Typography>
-        <Typography variant="body2" color="white.main">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+        <Typography variant="p" color="white.main">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio exercitationem, ex ut id nulla similique doloribus maiores magnam sint possimus sapiente repellat nesciunt ipsum consectetur ratione nostrum dolorem vitae voluptates.
         </Typography>
       </Grid>
-      <Grid item xs={12} sm={6} >
+      <Grid item xs={12} sm={6} display={"flex"} justifyContent={"center"}>
         <img src={bannerImg} alt="Video Card Banner" width={"80%"} />
       </Grid>
     </Grid>
