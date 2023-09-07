@@ -1,13 +1,11 @@
 import React from 'react'
-import Header from '../../components/Header'
-import Banner from '../../components/Banner'
-import Footer from '../../components/Footer'
+import Header from '../../components/Shared/Header'
+import Footer from '../../components/Shared/Footer'
 
 const Layout = ({children}) => {
   return (
     <>
       <Header/>
-      <Banner/>
         {children}
       <Footer/>
     </>
