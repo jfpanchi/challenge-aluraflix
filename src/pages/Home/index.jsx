@@ -1,14 +1,14 @@
 import React from 'react'
 import Banner from '../../components/Shared/Banner'
-import VideoCard from '../../components/Home/VideoCard'
-import Slider from '../../components/Home/Slider'
+import Carousel from '../../components/Home/Carousel'
 
 const Home = () => {
   return (
     <>
         <Banner/>
-        
-        <Slider/>
+        <Carousel />
+        <Carousel category={"Innovacion"}/>
+        <Carousel category={"Backend"}/>
     </>
   )
 }
