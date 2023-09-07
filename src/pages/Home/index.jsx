@@ -1,11 +1,14 @@
 import React from 'react'
-import Banner from '../../components/Banner'
+import Banner from '../../components/Shared/Banner'
+import VideoCard from '../../components/Home/VideoCard'
 
 const Home = () => {
   return (
     <>
         <Banner/>
-        <div>Home</div>
+        <VideoCard 
+            videoUrl={"https://www.youtube.com/watch?v=UuAX5azcvDQ"}
+        />
     </>
   )
 }

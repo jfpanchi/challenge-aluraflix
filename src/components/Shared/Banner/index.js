@@ -4,7 +4,7 @@ import {
 } from "@mui/material";
 import React from "react";
 import Button from "../Button";
-import bannerImg from "../../assets/VideoCard.png";
+import bannerImg from "../../../assets/VideoCard.png";
 
 const Banner = () => {
   return (
