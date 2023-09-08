@@ -1,7 +1,7 @@
 import { Box, Container, Grid, Typography } from '@mui/material'
 import Slider from '../Slider'
 
-const Carousel = ({category}) => {
+const Carousel = ({category, videos}) => {
   return (
     <Box
       bgcolor={"secondary.main"}
@@ -21,7 +21,7 @@ const Carousel = ({category}) => {
         </Grid>    
     
         
-        <Slider/>
+        <Slider videos={videos}/>
       </Container>
     </Box>
   )

@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import VideoCard from "../VideoCard";
 import { useMediaQuery } from "@mui/material";
 
-const Slider = () => {
+const Slider = ({videos}) => {
   const isSmallScreen = useMediaQuery("(max-width:600px)");
   const isMediumScreen = useMediaQuery("(max-width:960px)");
   const isLargeScreen = useMediaQuery("(min-width:961px)");
@@ -33,18 +33,15 @@ const Slider = () => {
   return (
     <>
       <Sld {...settings}>
-        <div>
-          <VideoCard videoUrl={"https://www.youtube.com/watch?v=UuAX5azcvDQ"} />
-        </div>
-        <div>
-          <VideoCard videoUrl={"https://www.youtube.com/watch?v=UuAX5azcvDQ"} />
-        </div>
-        <div>
-          <VideoCard videoUrl={"https://www.youtube.com/watch?v=UuAX5azcvDQ"} />
-        </div>
-        <div>
-          <VideoCard videoUrl={"https://www.youtube.com/watch?v=UuAX5azcvDQ"} />
-        </div>
+        {
+          videos.map((video, index) => {
+            return (
+              <div key={index}>
+                <VideoCard videoUrl={video.link} />
+              </div>
+            )
+          })
+        }
       </Sld>
     </>
   );
