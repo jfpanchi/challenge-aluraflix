@@ -1,27 +1,26 @@
 import { Box, Container, Grid, Typography } from '@mui/material'
 import Slider from '../Slider'
 
-const Carousel = ({category, videos}) => {
+const Carousel = ({category}) => {
+  
   return (
     <Box
       bgcolor={"secondary.main"}
       padding={2}
     >
       <Container>
-        <Grid container spacing={2}>
+        <Grid container >
           {
-            category 
+            category
             && (
-              <>
-                <Typography variant='h5'component={'h2'} color={"white.main"} bgcolor={"primary.main"} margin={2}>{category}</Typography>
-                <Typography variant='h6'component={'h3'} color={"gray"}margin={2}> Formacion {category}</Typography>
-              </>
+              <Grid item display={"flex"} alignItems={"center"}>
+                <Typography variant='h5'component={'h2'} color={"white.main"} bgcolor={category.color} marginTop={2} marginBottom={2} padding={1} borderRadius={1}>{category.name}</Typography>
+                <Typography variant='h6'component={'h3'} color={"gray"} marginLeft={2}> Formacion {category.name}</Typography>
+              </Grid>
             )
           }
         </Grid>    
-    
-        
-        <Slider videos={videos}/>
+        <Slider category={category}/>
       </Container>
     </Box>
   )

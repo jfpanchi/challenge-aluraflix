@@ -1,31 +1,27 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import Banner from '../../components/Shared/Banner'
 import Carousel from '../../components/Home/Carousel'
-import { getVideos } from '../../api/getVideos'
+
+import { DataContext } from '../../Context'
 
 const Home = () => {
   
-  const [videos, setVideos] = useState([]);
+  const data = useContext(DataContext);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await getVideos();
-        setVideos(data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
+  const categoriesWithVideos = data.categories.filter((category) => {
+    return data.videos.some((video) => video.category === category.name);
+  });
+  
+  const categoryCarousels = categoriesWithVideos.map((category, index) => (
+    <Carousel key={index} category={category} />
+  ));
+  
   return (
     <>
         <Banner/>
-        <Carousel videos={videos} />
-        <Carousel category={"Innovacion"} videos={videos}/>
-        <Carousel category={"Backend"} videos={videos}/>
+        {
+          categoryCarousels
+        }
     </>
   )
 }

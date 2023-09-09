@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import Sld from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import VideoCard from "../VideoCard";
 import { useMediaQuery } from "@mui/material";
+import { DataContext } from "../../../Context";
 
-const Slider = ({videos}) => {
+const Slider = ({category}) => {
+  const data = useContext(DataContext);
+  
   const isSmallScreen = useMediaQuery("(max-width:600px)");
   const isMediumScreen = useMediaQuery("(max-width:960px)");
   const isLargeScreen = useMediaQuery("(min-width:961px)");
@@ -30,20 +33,21 @@ const Slider = ({videos}) => {
     settings.slidesToScroll = 3;
   }
 
+  
   return (
-    <>
       <Sld {...settings}>
         {
-          videos.map((video, index) => {
+          data.videos
+          .filter(video => video.category === category.name)
+          .map((video, index) => {
             return (
               <div key={index}>
-                <VideoCard videoUrl={video.link} />
+                <VideoCard videoUrl={video.link} category={video.category} name={video.name}/>
               </div>
             )
           })
         }
       </Sld>
-    </>
   );
 };
 

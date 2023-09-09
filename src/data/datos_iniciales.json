@@ -13,10 +13,62 @@
             "description": "Ve cómo funciona esta famosa herramienta de colaboración muy utilizada en el universo de la tecnología y tiene el control de las diferentes versiones de tus proyectos."
         },
         {
+            "title": "Git y GitHub para Principiantes",
+            "link": "https://www.youtube.com/watch?v=-LmFK6skG7s",
+            "category": "Front End",
+            "description": "Ve cómo funciona esta famosa herramienta de colaboración muy utilizada en el universo de la tecnología y tiene el control de las diferentes versiones de tus proyectos."
+        },
+        {
             "title": "Como utilizar el Display block, inline, inline-block",
             "link": "https://www.youtube.com/watch?v=AG2QssLpQzI",
             "category": "Front End",
             "description": "Sabemos que posicionar elementos utilizando CSS a veces puede ser algo desafiador, por eso en este video nuestra instructora Jeanmarie Quijada te explica que es la propiedad Display en CSS y algunos de sus valores."
+        },
+        {
+            "title": "Como utilizar el Display block, inline, inline-block",
+            "link": "https://www.youtube.com/watch?v=AG2QssLpQzI",
+            "category": "Back End",
+            "description": "Sabemos que posicionar elementos utilizando CSS a veces puede ser algo desafiador, por eso en este video nuestra instructora Jeanmarie Quijada te explica que es la propiedad Display en CSS y algunos de sus valores."
+        },
+        {
+            "title": "Como utilizar el Display block, inline, inline-block",
+            "link": "https://www.youtube.com/watch?v=AG2QssLpQzI",
+            "category": "Back End",
+            "description": "Sabemos que posicionar elementos utilizando CSS a veces puede ser algo desafiador, por eso en este video nuestra instructora Jeanmarie Quijada te explica que es la propiedad Display en CSS y algunos de sus valores."
+        }
+    ],
+    "category": [
+        {
+            "name": "Front End",
+            "color": "#6BD1FF"
+        },
+        {
+            "name": "Back End",
+            "color": "#00C86F"
+        },
+        {
+            "name": "Mobile",
+            "color": "#FFBA05"
+        },
+        {
+            "name": "UX",
+            "color": "#DC6EBE"
+        },
+        {
+            "name": "Infraestructura",
+            "color": "#9CD33B"
+        },
+        {
+            "name": "Marketing",
+            "color": "#6B5BE2"
+        },
+        {
+            "name": "Innovación",
+            "color": "#FF8C2A"
+        },
+        {
+            "name": "Data Science",
+            "color": "#9CD33B"
         }
     ]
 }
