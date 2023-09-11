@@ -9,11 +9,15 @@ const Input = ({ placeholder, required, value, setValue, type="text"}) => {
 
   return (
     <TextField
+        fullWidth
         type={type}
-        placeholder={placeholder}
+        label={placeholder}
         required={required}
         value={value}
         onChange={updateValue}
+        variant="filled"
+        color="primary"
+        margin="dense"
     />
   )
 }

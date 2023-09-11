@@ -1,74 +1,96 @@
 {
-    "video": [
-        {
-            "title": "¿Cómo un desarrollador Front End utiliza el Figma?",
-            "link": "https://www.youtube.com/watch?v=UuAX5azcvDQ",
-            "category": "Front End",
-            "description": "En este Alura+, Genesys, instructora de Alura Latam, nos responde esa pregunta y nos muestra esta conocida herramienta."
-        },
-        {
-            "title": "Git y GitHub para Principiantes",
-            "link": "https://www.youtube.com/watch?v=-LmFK6skG7s",
-            "category": "Front End",
-            "description": "Ve cómo funciona esta famosa herramienta de colaboración muy utilizada en el universo de la tecnología y tiene el control de las diferentes versiones de tus proyectos."
-        },
-        {
-            "title": "Git y GitHub para Principiantes",
-            "link": "https://www.youtube.com/watch?v=-LmFK6skG7s",
-            "category": "Front End",
-            "description": "Ve cómo funciona esta famosa herramienta de colaboración muy utilizada en el universo de la tecnología y tiene el control de las diferentes versiones de tus proyectos."
-        },
-        {
-            "title": "Como utilizar el Display block, inline, inline-block",
-            "link": "https://www.youtube.com/watch?v=AG2QssLpQzI",
-            "category": "Front End",
-            "description": "Sabemos que posicionar elementos utilizando CSS a veces puede ser algo desafiador, por eso en este video nuestra instructora Jeanmarie Quijada te explica que es la propiedad Display en CSS y algunos de sus valores."
-        },
-        {
-            "title": "Como utilizar el Display block, inline, inline-block",
-            "link": "https://www.youtube.com/watch?v=AG2QssLpQzI",
-            "category": "Back End",
-            "description": "Sabemos que posicionar elementos utilizando CSS a veces puede ser algo desafiador, por eso en este video nuestra instructora Jeanmarie Quijada te explica que es la propiedad Display en CSS y algunos de sus valores."
-        },
-        {
-            "title": "Como utilizar el Display block, inline, inline-block",
-            "link": "https://www.youtube.com/watch?v=AG2QssLpQzI",
-            "category": "Back End",
-            "description": "Sabemos que posicionar elementos utilizando CSS a veces puede ser algo desafiador, por eso en este video nuestra instructora Jeanmarie Quijada te explica que es la propiedad Display en CSS y algunos de sus valores."
-        }
-    ],
-    "category": [
-        {
-            "name": "Front End",
-            "color": "#6BD1FF"
-        },
-        {
-            "name": "Back End",
-            "color": "#00C86F"
-        },
-        {
-            "name": "Mobile",
-            "color": "#FFBA05"
-        },
-        {
-            "name": "UX",
-            "color": "#DC6EBE"
-        },
-        {
-            "name": "Infraestructura",
-            "color": "#9CD33B"
-        },
-        {
-            "name": "Marketing",
-            "color": "#6B5BE2"
-        },
-        {
-            "name": "Innovación",
-            "color": "#FF8C2A"
-        },
-        {
-            "name": "Data Science",
-            "color": "#9CD33B"
-        }
-    ]
+  "video": [
+    {
+      "title": "¿Cómo un desarrollador Front End utiliza el Figma?",
+      "link": "https://www.youtube.com/watch?v=UuAX5azcvDQ",
+      "category": "Front End",
+      "description": "En este Alura+, Genesys, instructora de Alura Latam, nos responde esa pregunta y nos muestra esta conocida herramienta."
+    },
+    {
+      "title": "Git y GitHub para Principiantes",
+      "link": "https://www.youtube.com/watch?v=-LmFK6skG7s",
+      "category": "Front End",
+      "description": "Ve cómo funciona esta famosa herramienta de colaboración muy utilizada en el universo de la tecnología y tiene el control de las diferentes versiones de tus proyectos."
+    },
+    {
+      "title": "Git y GitHub para Principiantes",
+      "link": "https://www.youtube.com/watch?v=-LmFK6skG7s",
+      "category": "Front End",
+      "description": "Ve cómo funciona esta famosa herramienta de colaboración muy utilizada en el universo de la tecnología y tiene el control de las diferentes versiones de tus proyectos."
+    },
+    {
+      "title": "Como utilizar el Display block, inline, inline-block",
+      "link": "https://www.youtube.com/watch?v=AG2QssLpQzI",
+      "category": "Front End",
+      "description": "Sabemos que posicionar elementos utilizando CSS a veces puede ser algo desafiador, por eso en este video nuestra instructora Jeanmarie Quijada te explica que es la propiedad Display en CSS y algunos de sus valores."
+    },
+    {
+      "title": "Como utilizar el Display block, inline, inline-block",
+      "link": "https://www.youtube.com/watch?v=AG2QssLpQzI",
+      "category": "Back End",
+      "description": "Sabemos que posicionar elementos utilizando CSS a veces puede ser algo desafiador, por eso en este video nuestra instructora Jeanmarie Quijada te explica que es la propiedad Display en CSS y algunos de sus valores."
+    },
+    {
+      "title": "Como utilizar el Display block, inline, inline-block",
+      "link": "https://www.youtube.com/watch?v=AG2QssLpQzI",
+      "category": "Back End",
+      "description": "Sabemos que posicionar elementos utilizando CSS a veces puede ser algo desafiador, por eso en este video nuestra instructora Jeanmarie Quijada te explica que es la propiedad Display en CSS y algunos de sus valores."
+    }
+  ],
+  "category": [
+    {
+      "id": "1eff4bc8-f397-44dd-b506-f68d529ff610",
+      "name": "Front End",
+      "description": "Front End",
+      "color": "#6BD1FF"
+    },
+    {
+      "id": "1eff4bc8-f735-44dd-b674-f68d529ff610",
+      "name": "Back End",
+      "description": "Back End",
+      "color": "#00C86F"
+    },
+    {
+      "id": "1eff4gh8-f214-44dd-b764-f68d529ff610",
+      "name": "Mobile",
+      "description": "Mobile",
+      "color": "#FFBA05"
+    },
+    {
+      "id": "1eff4nb6-f214-44dd-b444-f68d529ff610",
+      "name": "UX",
+      "description": "UX",
+      "color": "#DC6EBE"
+    },
+    {
+      "id": "1effeefe-f543-44dd-b876-f68d529ff610",
+      "name": "Infraestructura",
+      "description": "Infraestructura",
+      "color": "#9CD33B"
+    },
+    {
+      "id": "1effeefe-f087-44dd-b213-f68d529ff610",
+      "name": "Marketing",
+      "description": "Marketing",
+      "color": "#6B5BE2"
+    },
+    {
+      "id": "1effeefe-f233-44dd-b533-f68d529ff610",
+      "name": "Innovación",
+      "description": "Innovación",
+      "color": "#FF8C2A"
+    },
+    {
+      "id": "1effeefe-f766-44dd-787b-f68d529ff610",
+      "name": "Data Science",
+      "description": "Data Science",
+      "color": "#9CD33B"
+    },
+    {
+      "name": "Base de datos",
+      "description": "Base de datos",
+      "color": "#366f9b",
+      "id": "c13025cf-afbd-4d8e-943a-bcafddc08b6a"
+    }
+  ]
 }

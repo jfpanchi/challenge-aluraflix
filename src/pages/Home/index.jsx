@@ -12,8 +12,8 @@ const Home = () => {
     return data.videos.some((video) => video.category === category.name);
   });
   
-  const categoryCarousels = categoriesWithVideos.map((category, index) => (
-    <Carousel key={index} category={category} />
+  const categoryCarousels = categoriesWithVideos.map((category) => (
+    <Carousel key={category.id} category={category} />
   ));
   
   return (
