@@ -4,6 +4,7 @@ import { getCategories } from "./api/getCategories";
 import { addCategory } from "./api/addCategory";
 import { deleteCategory } from "./api/deleteCategory";
 import { updateCategory } from "./api/updateCategory";
+import { addVideo } from "./api/addVideo";
 
 export const DataContext = createContext();
 
@@ -18,6 +19,15 @@ export const DataProvider = ({children}) => {
   const onCreateCategory = async(name, description, color) => {
     try {
       await addCategory(name, description,color);
+      fetchData();
+    } catch (error) {
+      console.error(error);
+    }
+  }
+  
+  const onCreateVideo = async(title, link, category, description) => {
+    try {
+      await addVideo(title, link, category, description);
       fetchData();
     } catch (error) {
       console.error(error);
@@ -60,7 +70,8 @@ export const DataProvider = ({children}) => {
 
     onCreateCategory,
     onDeleteCategory,
-    onUpdateCategory
+    onUpdateCategory,
+    onCreateVideo
   }
 
   return (
