@@ -10,8 +10,8 @@ function App() {
   return (
     <Layout>
       {/* <Home/> */}
-      {/* <RegisterCategory/> */}
-      <RegisterVideo/>
+      <RegisterCategory/>
+      {/* <RegisterVideo/> */}
     </Layout>
   );
 }

@@ -1,8 +1,9 @@
-import { Box, Container, Typography, Grid, MenuItem } from "@mui/material";
+import { Grid, MenuItem } from "@mui/material";
 import Input from "../../../components/Shared/Input";
 import { useContext, useState } from "react";
 import Button from "../../../components/Shared/Button";
 import { DataContext } from "../../../Context";
+import Form from "../../../components/Shared/Form";
 
 const RegisterVideo = () => {
   const data = useContext(DataContext);
@@ -20,84 +21,68 @@ const RegisterVideo = () => {
   };
 
   const onSubmitAddVideo = () => {
-    data.onCreateVideo(title,link,category,description);
+    data.onCreateVideo(title, link, category, description);
   };
 
   return (
-    <Box bgcolor={"secondary.main"} padding={4} component="form">
-      <Container>
-        <Typography
-          component={"h2"}
-          variant="h3"
-          textAlign={"center"}
-          color={"white.main"}
-        >
-          Nuevo video
-        </Typography>
+    <Form title={"Nuevo Video"}>
+      <Input placeholder={"Title"} value={title} setValue={setTitle} required />
 
-        <Input
-          placeholder={"Title"}
-          value={title}
-          setValue={setTitle}
-          required
-        />
+      <Input
+        placeholder={"Link del video (Youtube)"}
+        value={link}
+        setValue={setLink}
+        required
+      />
 
-        <Input
-          placeholder={"Link del video (Youtube)"}
-          value={link}
-          setValue={setLink}
-          required
-        />
+      <Input
+        placeholder={"Categoria"}
+        value={category}
+        setValue={setCategory}
+        required
+        select={true}
+      >
+        {data.categories.map((category) => (
+          <MenuItem key={category.id} value={category.name}>
+            {category.name}
+          </MenuItem>
+        ))}
+      </Input>
 
-        <Input
-          placeholder={"Categoria"}
-          value={category}
-          setValue={setCategory}
-          required
-          select={true}
-        >
-          {data.categories.map((category) => (
-            <MenuItem key={category.id} value={category.name}>
-              {category.name}
-            </MenuItem>
-          ))}
-        </Input>
+      <Input
+        placeholder={"Descripcion"}
+        value={description}
+        setValue={setDescription}
+        required
+      />
 
-        <Input
-          placeholder={"Descripcion"}
-          value={description}
-          setValue={setDescription}
-          required
-        />
-
-        <Grid container marginTop={2} marginBottom={2}>
-          <Grid item marginRight={2} marginBottom={2}>
-            <Button
-              text="Guardar"
-              variant="contained"
-              onClick={onSubmitAddVideo}
-            />
-          </Grid>
-
-          <Grid item marginRight={2} marginBottom={2}>
-            <Button
-              text="Limpiar"
-              variant="contained"
-              color="secondary"
-              onClick={Clear}
-            />
-          </Grid>
-          
-          <Grid item marginLeft={"auto"} >
-            <Button
-              text="Nueva Categoria"
-              variant="contained"
-              color="secondary"
-            />
-          </Grid>
+      <Grid container marginTop={2} marginBottom={2}>
+        <Grid item marginRight={2} marginBottom={2}>
+          <Button
+            text="Guardar"
+            variant="contained"
+            onClick={onSubmitAddVideo}
+          />
         </Grid>
-      </Container>
-    </Box>
+
+        <Grid item marginRight={2} marginBottom={2}>
+          <Button
+            text="Limpiar"
+            variant="contained"
+            color="secondary"
+            onClick={Clear}
+          />
+        </Grid>
+
+        <Grid item marginLeft={"auto"}>
+          <Button
+            text="Nueva Categoria"
+            variant="contained"
+            color="secondary"
+          />
+        </Grid>
+      </Grid>
+    </Form>
   );
 };
 
