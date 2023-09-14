@@ -1,40 +1,88 @@
 {
   "video": [
     {
-      "title": "¿Cómo un desarrollador Front End utiliza el Figma?",
-      "link": "https://www.youtube.com/watch?v=UuAX5azcvDQ",
+      "title": "Equipo Front End",
+      "link": "https://www.youtube.com/watch?v=rpvrLaBQwgg",
       "category": "Front End",
-      "description": "En este Alura+, Genesys, instructora de Alura Latam, nos responde esa pregunta y nos muestra esta conocida herramienta."
+      "descripcion": "En este video, Jeanmarie Quijada, instructora Front End en Alura Latam te explica qué hace el equipo de Front End.",
+      "id": "bbb3e082-6531-4984-a8b8-185ec677171c"
     },
     {
-      "title": "Git y GitHub para Principiantes",
-      "link": "https://www.youtube.com/watch?v=-LmFK6skG7s",
+      "title": "Consejos de CSS FlexBox para comenzar",
+      "link": "https://www.youtube.com/watch?v=EB4vWLzfVcI",
       "category": "Front End",
-      "description": "Ve cómo funciona esta famosa herramienta de colaboración muy utilizada en el universo de la tecnología y tiene el control de las diferentes versiones de tus proyectos."
+      "descripcion": "En esta nueva edición de Alura + aprenderemos un poco más sobre los primeros pasos para empezar a trabajar con Flexbox en CSS y conoceremos las principales etiquetas y cómo aplicarlas.",
+      "id": "a8c295c4-a89d-4d36-a8a2-f334617d98c8"
     },
     {
-      "title": "Git y GitHub para Principiantes",
-      "link": "https://www.youtube.com/watch?v=-LmFK6skG7s",
+      "title": "¿Por qué utilizar React?",
+      "link": "https://www.youtube.com/watch?v=MnBNPA45NW8",
       "category": "Front End",
-      "description": "Ve cómo funciona esta famosa herramienta de colaboración muy utilizada en el universo de la tecnología y tiene el control de las diferentes versiones de tus proyectos."
+      "descripcion": "Harland nos comentará como surgió React, por que utilizarlo y por que se tornó una librería tan importante en el desarrollo front end.",
+      "id": "00996d33-d979-4dde-9d39-ca3f48ac8a32"
     },
     {
-      "title": "Como utilizar el Display block, inline, inline-block",
-      "link": "https://www.youtube.com/watch?v=AG2QssLpQzI",
+      "title": "¿Cómo un desarrollador Front End utiliza el Figma? ",
+      "link": "https://www.youtube.com/watch?v=UuAX5azcvDQ&t=19s",
       "category": "Front End",
-      "description": "Sabemos que posicionar elementos utilizando CSS a veces puede ser algo desafiador, por eso en este video nuestra instructora Jeanmarie Quijada te explica que es la propiedad Display en CSS y algunos de sus valores."
+      "descripcion": "En este Alura+, Genesys, instructora de Alura Latam, nos responde esa pregunta y nos muestra esta conocida herramienta.",
+      "id": "35d3f8de-9a11-4259-935f-aee1df9ac63c"
     },
     {
-      "title": "Como utilizar el Display block, inline, inline-block",
-      "link": "https://www.youtube.com/watch?v=AG2QssLpQzI",
+      "title": "¡Domina CSS Flexbox con FlexboxFroggy! Aprende jugando en este desafío divertido",
+      "link": "https://www.youtube.com/watch?v=MXPhyN5t0uQ",
+      "category": "Front End",
+      "descripcion": "¿Conoces el término CSS? ¿Sabes que és? En este alura.tips Gabi A entrevista la instructora front end Barbara y aprende sobre el mundo del CSS de una forma muy divertida.",
+      "id": "4cc9e9f5-52c9-4cc8-a67a-81f9b6c100b3"
+    },
+    {
+      "title": "Explorando el poder del Back-End en el Desarrollo Web",
+      "link": "https://www.youtube.com/watch?v=Z024LSCMqFk",
       "category": "Back End",
-      "description": "Sabemos que posicionar elementos utilizando CSS a veces puede ser algo desafiador, por eso en este video nuestra instructora Jeanmarie Quijada te explica que es la propiedad Display en CSS y algunos de sus valores."
+      "descripcion": "Por qué empezar su carrera con Back End",
+      "id": "84dc0275-ef98-4ee9-89c4-5cfd2cbd56e6"
     },
     {
-      "title": "Como utilizar el Display block, inline, inline-block",
-      "link": "https://www.youtube.com/watch?v=AG2QssLpQzI",
+      "title": "Empresas que aprenden",
+      "link": "https://www.youtube.com/watch?v=mwNfWRsDDWE",
+      "category": "Innovación",
+      "descripcion": "El aprendizaje organizacional promueve tanto la adaptación al cambio como el crecimiento de la empresa**. Pero, ¿tienes alguna idea de cómo hacerse esto? En este Alura+, Priscila Stuani habla sobre el papel de la organización en el proceso de aprendizaje de sus profesionales.",
+      "id": "92b52778-6675-4fbe-985d-d342aaa97a53"
+    },
+    {
+      "title": "Python para Data Science",
+      "link": "https://www.youtube.com/watch?v=JMKZMa0tMhQ",
+      "category": "Data Science",
+      "descripcion": "¿Vamos a hablar de Phyton para ciencia de datos?",
+      "id": "dd53bb81-92a8-4487-b927-92ab8dbe23ce"
+    },
+    {
+      "title": "Accesibilidad Web",
+      "link": "https://www.youtube.com/watch?v=ngMOsuZL-XE",
+      "category": "UX",
+      "descripcion": "En este Alura+, la instructora Barbara dos Santos y nuestra Scuba Mariana Costa, se juntan para hablar de un tema de extrema importancia para cualquier desarrollador: Accesibilidad Web.",
+      "id": "3e8ba5d8-7a77-485a-8e63-06f99c9bd8ad"
+    },
+    {
+      "title": "Banco de Datos MySQL",
+      "link": "https://www.youtube.com/watch?v=8J0AoPZMVxA",
+      "category": "Base de datos",
+      "descripcion": "¿Vamos a hablar de Base de datos con MySQL?",
+      "id": "3f2eafff-ecd8-43dd-8f3a-a6e8cd55b297"
+    },
+    {
+      "title": "Desmistificando el Back-End",
+      "link": "https://www.youtube.com/watch?v=LLt7FreeHfQ",
       "category": "Back End",
-      "description": "Sabemos que posicionar elementos utilizando CSS a veces puede ser algo desafiador, por eso en este video nuestra instructora Jeanmarie Quijada te explica que es la propiedad Display en CSS y algunos de sus valores."
+      "descripcion": "¿Qué es backend?  ¿Por qué debería comenzar mi carrera con backend? ",
+      "id": "8c7bfd64-1608-4e89-84cb-86b7295f9af3"
+    },
+    {
+      "title": "¿Por qué estudiar Data Science?",
+      "link": "https://www.youtube.com/watch?v=7_UXo-aqAeM",
+      "category": "Data Science",
+      "descripcion": "Qué es Ciencia de Datos",
+      "id": "696cb131-6e71-4566-9509-1bed2149b1f4"
     }
   ],
   "category": [

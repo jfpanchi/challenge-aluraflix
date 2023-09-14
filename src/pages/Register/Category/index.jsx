@@ -14,59 +14,81 @@ import Button from "../../../components/Shared/Button";
 import { DataContext } from "../../../Context";
 import ColorLensIcon from "@mui/icons-material/ColorLens";
 import Form from "../../../components/Shared/Form";
+import { useSnackbar } from 'notistack';
+import { validateColor, validateDescription, validateName } from "./validacion";
 
 const RegisterCategory = () => {
   const data = useContext(DataContext);
+  const { enqueueSnackbar } = useSnackbar();
+
   const [id, setId] = useState(null);
-  const [name, setName] = useState("");
-  const [description, setDescription] = useState("");
-  const [color, setColor] = useState("#000000");
+  const [name, setName] = useState({value: "", valid: null});
+  const [description, setDescription] = useState({value: "", valid: null});
+  const [color, setColor] = useState({value: "#000000", valid: null});
   const [isEditable, setIsEditable] = useState(false);
 
   const Clear = () => {
-    setName("");
-    setDescription("");
-    setColor("#000000");
+    setName({value: "", valid: null});
+    setDescription({value: "", valid: null});
+    setColor({value: "#000000", valid: null});
     setIsEditable(false);
   };
 
   const onSubmitAddCategory = () => {
-    data.onCreateCategory(name, description, color);
+    data.onCreateCategory(name.value, description.value, color.value);
+    enqueueSnackbar('Caregoria agregada', {variant: "success"});
   };
 
   const onSubmitDeleteCategory = (id) => {
     data.onDeleteCategory(id);
+    enqueueSnackbar('Caregoria eliminada', {variant: "warning"});
   };
 
   const onEdit = (category) => {
-    setName(category.name);
-    setDescription(category.description);
-    setColor(category.color);
+    setName({value: category.name, valid: null});
+    setDescription({value: category.description, valid: null});
+    setColor({value: category.color, valid: null});
     setIsEditable(true);
     setId(category.id);
+    enqueueSnackbar('Caregoria lista para editar', {variant: "info"});
   };
 
   const onSubmitEdit = () => {
     if (!id) return;
-    data.onUpdateCategory(name, description, color, id);
+    data.onUpdateCategory(name.value, description.value, color.value, id);
+    enqueueSnackbar('Caregoria editada', {variant: "success"});
   };
 
   return (
     
     <Form title={"Nueva categoría"}>
-      <Input placeholder={"Nombre"} value={name} setValue={setName} required />
+      <Input 
+        placeholder={"Nombre"} 
+        value={name.value} 
+        setValue={setName}
+        valid={name.valid}
+        validateValue={validateName}
+        errorMessage={"El nombre debe tener al menos 3 caracteres y no más de 29 caracteres"} 
+        required 
+      />
 
       <Input
         placeholder={"Descripción"}
-        value={description}
+        value={description.value}
         setValue={setDescription}
+        valid={description.valid}
+        validateValue={validateDescription}
+        errorMessage={"La descripción debe tener al menos 3 caracteres y no exceder los 50 caracteres"}
         required
       />
 
       <Input
         placeholder={"Color"}
-        value={color}
+        value={color.value}
         setValue={setColor}
+        valid={color.valid}
+        validateValue={validateColor}
+        errorMessage={"Se debe ingresar el color"}
         required
         type="color"
       />
@@ -74,10 +96,11 @@ const RegisterCategory = () => {
         {isEditable ? (
           <Grid item marginRight={2}>
             <Button
-              text="Save"
+              text="Editar"
               variant="contained"
               color="success"
               onClick={onSubmitEdit}
+              
             />{" "}
           </Grid>
         ) : (
@@ -86,6 +109,7 @@ const RegisterCategory = () => {
               text="Guardar"
               variant="contained"
               onClick={onSubmitAddCategory}
+              disabled={!(!!name.valid && !!description.valid)}
             />
           </Grid>
         )}

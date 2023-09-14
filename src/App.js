@@ -9,9 +9,9 @@ function App() {
 
   return (
     <Layout>
-      {/* <Home/> */}
+      <Home/>
       <RegisterCategory/>
-      {/* <RegisterVideo/> */}
+      <RegisterVideo/>
     </Layout>
   );
 }

@@ -4,42 +4,61 @@ import { useContext, useState } from "react";
 import Button from "../../../components/Shared/Button";
 import { DataContext } from "../../../Context";
 import Form from "../../../components/Shared/Form";
+import { useSnackbar } from "notistack";
+import { validateCategory, validateDescription, validateLink, validateTitle } from "./validacion";
+
 
 const RegisterVideo = () => {
   const data = useContext(DataContext);
+  const { enqueueSnackbar } = useSnackbar();
 
-  const [title, setTitle] = useState("");
-  const [link, setLink] = useState("");
-  const [category, setCategory] = useState("");
-  const [description, setDescription] = useState("");
+  const [title, setTitle] = useState({value: "", valid: null});
+  const [link, setLink] = useState({value: "", valid: null});
+  const [category, setCategory] = useState({value: "", valid: null});
+  const [description, setDescription] = useState({value: "", valid: null});
 
   const Clear = () => {
-    setTitle("");
-    setDescription("");
-    setCategory("");
-    setLink("");
+    setTitle({value: "", valid: null});
+    setDescription({value: "", valid: null});
+    setCategory({value: "", valid: null});
+    setLink({value: "", valid: null});
   };
 
   const onSubmitAddVideo = () => {
-    data.onCreateVideo(title, link, category, description);
+    data.onCreateVideo(title.value, link.value, category.value, description.value);
+    enqueueSnackbar('Video agregado', {variant: "success"});
   };
 
   return (
     <Form title={"Nuevo Video"}>
-      <Input placeholder={"Title"} value={title} setValue={setTitle} required />
+      <Input 
+        placeholder={"Title"} 
+        value={title.value} 
+        setValue={setTitle} 
+        valid={title.valid}
+        validateValue={validateTitle}
+        errorMessage={"El nombre debe tener al menos 3 caracteres y no más de 29 caracteres"} 
+        required 
+      />
 
       <Input
         placeholder={"Link del video (Youtube)"}
-        value={link}
+        value={link.value}
         setValue={setLink}
-        required
+        valid={link.valid}
+        validateValue={validateLink}
+        errorMessage={"No es un enlace de YouTube válido"} 
+        required 
       />
 
       <Input
         placeholder={"Categoria"}
-        value={category}
+        value={category.value}
         setValue={setCategory}
-        required
+        valid={category.valid}
+        validateValue={validateCategory}
+        errorMessage={"Debe seleccionar una categoria"} 
+        required 
         select={true}
       >
         {data.categories.map((category) => (
@@ -50,9 +69,12 @@ const RegisterVideo = () => {
       </Input>
 
       <Input
-        placeholder={"Descripcion"}
-        value={description}
+        placeholder={"Descripción"}
+        value={description.value}
         setValue={setDescription}
+        valid={description.valid}
+        validateValue={validateDescription}
+        errorMessage={"La descripción debe tener al menos 3 caracteres y no exceder los 50 caracteres"}
         required
       />
 
@@ -62,6 +84,7 @@ const RegisterVideo = () => {
             text="Guardar"
             variant="contained"
             onClick={onSubmitAddVideo}
+            disabled={!(!!title.valid && !!link.valid && category.valid && description.value)}
           />
         </Grid>
 

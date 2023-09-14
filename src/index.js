@@ -7,6 +7,7 @@ import { ThemeProvider } from "@emotion/react";
 import { globalTheme } from "./Global";
 import { CssBaseline } from "@mui/material";
 import { DataProvider } from "./Context";
+import { SnackbarProvider } from "notistack";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,7 +15,9 @@ root.render(
     <DataProvider>
       <ThemeProvider theme={globalTheme}>
         <CssBaseline />
-        <App />
+        <SnackbarProvider>
+          <App />
+        </SnackbarProvider>
       </ThemeProvider>
     </DataProvider>
   </React.StrictMode>

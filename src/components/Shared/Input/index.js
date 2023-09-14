@@ -1,9 +1,13 @@
 import { TextField } from "@mui/material";
 
-const Input = ({ placeholder, required, value, setValue, type="text", select=false, children}) => {
+const Input = ({ placeholder, required, value, setValue, valid, validateValue, errorMessage, type="text", select=false, children}) => {
   
   const updateValue = (event) => {
-    setValue(event.target.value);
+    console.log(validateValue(event.target.value), event.target.value);
+    setValue({
+      value: event.target.value, 
+      valid: validateValue(event.target.value)
+    });
   }
 
 
@@ -16,6 +20,8 @@ const Input = ({ placeholder, required, value, setValue, type="text", select=fal
         required={required}
         value={value}
         onChange={updateValue}
+        error={valid != null && !valid ? true : false}
+        helperText={ valid != null && !valid && errorMessage}
         variant="filled"
         color="primary"
         margin="dense"
