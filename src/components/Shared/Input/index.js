@@ -3,7 +3,6 @@ import { TextField } from "@mui/material";
 const Input = ({ placeholder, required, value, setValue, valid, validateValue, errorMessage, type="text", select=false, children}) => {
   
   const updateValue = (event) => {
-    console.log(validateValue(event.target.value), event.target.value);
     setValue({
       value: event.target.value, 
       valid: validateValue(event.target.value)

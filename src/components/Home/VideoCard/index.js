@@ -2,7 +2,7 @@ import { Card, CardMedia } from "@mui/material";
 import { useContext } from "react";
 import { DataContext } from "../../../Context";
 
-const VideoCard = ({videoUrl, category, name}) => {
+const VideoCard = ({ videoUrl, category, name }) => {
   const data = useContext(DataContext);
 
   const getVideoId = (url) => {
@@ -17,20 +17,27 @@ const VideoCard = ({videoUrl, category, name}) => {
   }
 
   const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
-  
-  
+
   const color = () => {
     const foundCategory = data.categories.find((cat) => cat.name === category);
-    return foundCategory ? foundCategory.color : '#191919';
-  }
+    return foundCategory ? foundCategory.color : "#191919";
+  };
 
   return (
-    <Card sx={{ maxWidth: 320 }}>
+    <Card
+      sx={{
+        maxWidth: 320,
+        transition: "box-shadow 0.3s ease",
+        ":hover": {
+          boxShadow: `0 0 10px ${color()}`,
+        },
+      }}
+      onDoubleClick={() => window.open(videoUrl, "_blank")}
+    >
       <CardMedia
-        sx={{height: 180, border: `4px solid ${color()}`}}
+        sx={{ height: 180, border: `4px solid ${color()}` }}
         image={thumbnailUrl}
         title={name}
-        
       />
     </Card>
   );

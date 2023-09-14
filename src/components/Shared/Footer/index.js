@@ -3,14 +3,17 @@ import React from "react";
 import Button from "../Button";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { Link, useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const location = useLocation();
+ 
   return (
     <Box>
       <Divider color="#2A7AE4" sx={{ height: "2px" }} />
       <AppBar position="static" color="secondary">
         <Toolbar sx={{ display: "flex" , justifyContent: "center" , flexDirection: "column"}}>
-            <Box sx={{textAlign:"center", display: { xs: "none", sm: "block" } }}>
+            <Box sx={{textAlign:"center", display: { xs: location.pathname === "/" ? "none" : "block", sm: "block" } }}>
                 <Typography
                     color="primary"
                     variant="h6"
@@ -28,8 +31,10 @@ const Footer = () => {
                 </Typography>   
             </Box>
           
-            <Box sx={{ display: { xs: "block", sm: "none"}, width: "100%" }}>
-                <Button variant="contained" text="Nuevo video" color="primary" fullWidth={true}/>
+            <Box sx={{ display: { xs: location.pathname === "/" ? "block" : "none", sm: "none", }, width: "100%" }}>
+                <Link to={"nuevo-video"}>
+                  <Button variant="contained" text="Nuevo video" color="primary" fullWidth={true}/>
+                </Link>
             </Box>
         </Toolbar>
       </AppBar>
