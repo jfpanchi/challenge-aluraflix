@@ -1,7 +1,9 @@
 import { v4 as uuidv4 } from 'uuid';
+import { getEnvVariables } from '../helpers/getEnvVariables';
+const API = getEnvVariables();
 
 export const addCategory = async( name, description, color) => {
-    return await fetch('http://localhost:4000/category',{
+    return await fetch(`${API}/category`,{
          method: 'POST',
          headers: {
              "Content-Type": "application/json"

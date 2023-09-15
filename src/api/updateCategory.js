@@ -1,5 +1,8 @@
+import { getEnvVariables } from "../helpers/getEnvVariables";
+
+const API = getEnvVariables();
 export const updateCategory = (name, description, color, id) => {
-    return fetch(`http://localhost:4000/category/${id}`,{
+    return fetch(`${API.REACT_APP_API}/category/${id}`,{
         method: "PUT",
         headers: {
             "Content-Type": "application/json"

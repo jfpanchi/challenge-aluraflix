@@ -1,6 +1,9 @@
+import { getEnvVariables } from "../helpers/getEnvVariables";
+
+const API = getEnvVariables();
 export const getVideos = async () => {
     try {
-      const response = await fetch('http://localhost:4000/video');
+      const response = await fetch(`${API.REACT_APP_API}/video`);
       if (!response.ok) {
         throw new Error(`Error en la solicitud: ${response.status}`);
       }

@@ -3,8 +3,7 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-import Button from "../Button";
-import bannerImg from "../../../assets/VideoCard.png";
+
 
 const Banner = () => {
   return (
@@ -19,7 +18,19 @@ const Banner = () => {
       alignContent={"center"}
     >
       <Grid item xs={12} sm={6}>
-        <Button variant="contained" size="small" text="FrontEnd" />
+      <Typography
+          gutterBottom
+          variant="h6"
+          component="div"
+          bgcolor="primary.main"
+          color="white.main"
+          marginTop={2}
+          padding={2}
+          display={"inline-block"}
+          borderRadius={2}
+        >
+          Front End
+        </Typography>
         <Typography
           gutterBottom
           variant="h5"
@@ -30,11 +41,11 @@ const Banner = () => {
           Challege React
         </Typography>
         <Typography variant="p" color="white.main">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio exercitationem, ex ut id nulla similique doloribus maiores magnam sint possimus sapiente repellat nesciunt ipsum consectetur ratione nostrum dolorem vitae voluptates.
+        Este challenge es una forma de aprendizaje. Es un mecanismo donde podrás comprometerte en la resolución de un problema para poder aplicar todos los conocimientos adquiridos en la formación React.
         </Typography>
       </Grid>
-      <Grid item xs={12} sm={6} display={"flex"} justifyContent={"center"}>
-        <img src={bannerImg} alt="Video Card Banner" width={"80%"} />
+      <Grid item xs={12} sm={6} padding={2} display={"flex"} justifyContent={"center"}>
+        <iframe width="100%" height="340" src="https://www.youtube.com/embed/ov7vA5HFe6w?si=7OEvOqV7HKBhT1xo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </Grid>
     </Grid>
   );

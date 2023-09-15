@@ -1,6 +1,9 @@
+import { getEnvVariables } from "../helpers/getEnvVariables";
+const API = getEnvVariables();
+
 export const getCategories = async () => {
     try {
-      const response = await fetch('http://localhost:4000/category');
+      const response = await fetch(`${API.REACT_APP_API}/category`);
       if (!response.ok) {
         throw new Error(`Error en la solicitud: ${response.status}`);
       }
