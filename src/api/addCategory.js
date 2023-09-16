@@ -3,7 +3,7 @@ import { getEnvVariables } from '../helpers/getEnvVariables';
 const API = getEnvVariables();
 
 export const addCategory = async( name, description, color) => {
-    return await fetch(`${API}/category`,{
+    return await fetch(`${API.REACT_APP_API}/category`,{
          method: 'POST',
          headers: {
              "Content-Type": "application/json"
